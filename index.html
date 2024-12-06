@@ -124,7 +124,6 @@
                 const price = data.bitcoin.usd;
                 updateChart(price);
             } catch (error) {
-                document.querySelector('.price').textContent = 'Error loading price';
                 console.error(error);
             }
         }
