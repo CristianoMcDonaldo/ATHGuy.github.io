@@ -119,12 +119,7 @@
 
         async function getBitcoinData() {
             try {
-                const response = await fetch('https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true&include_last_updated_at=true&precision=2');
-                const data = await response.json();
-                const price = data.bitcoin.usd;
-                document.querySelector('.price').textContent = `$${price.toLocaleString()}`;
-                document.querySelector('.price').classList.remove('loading');
-                updateChart(price);
+                updateChart(103679);
             } catch (error) {
                 document.querySelector('.price').textContent = 'Error loading price';
                 console.error(error);
